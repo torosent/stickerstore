@@ -1,0 +1,13 @@
+name: stickerstore:1.0.0
+clusters:
+  simpleservice:
+    services:
+      breed:
+        name: stickerstore:1.0.0
+        deployable: torosent/stickerstore:1.0.0
+        ports:
+          web: 3000/http
+      scale:
+        cpu: 0.5
+        memory: 512MB
+        instances: 1

@@ -1,0 +1,6 @@
+name: stickerstore/stickerstore/web
+routes:
+  stickerstore/stickerstore/stickerstore:1.1.0/web:
+    weight: 50%
+  stickerstore/stickerstore/stickerstore:1.0.0/web:
+    weight: 50%
