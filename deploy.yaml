@@ -26,7 +26,7 @@ spec:
         app: stickerstore
     spec:
       containers:
-      - name: webstore
-        image: torosent/stickerstore:1.0.0
+      - name: stickerstore
+        image: torosent/stickerstore:$APP_VERSION
         ports:
         - containerPort: 3000
