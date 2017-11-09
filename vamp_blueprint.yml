@@ -11,3 +11,9 @@ clusters:
         cpu: 0.5
         memory: 512MB
         instances: 1
+      health_checks:
+        initial_delay: 10s
+        port: web
+        timeout: 5s
+        interval: 10s
+        failures: 10       
