@@ -1,6 +1,6 @@
 name: stickerstore:1.0.0
 clusters:
-  simpleservice:
+  stickerstore:
     services:
       breed:
         name: stickerstore:1.0.0
