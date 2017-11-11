@@ -16,4 +16,4 @@ clusters:
         port: web
         timeout: 5s
         interval: 10s
-        failures: 10       
+        failures: 1       
