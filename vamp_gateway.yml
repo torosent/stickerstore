@@ -2,5 +2,3 @@ name: stickerstore/stickerstore/web
 routes:
   stickerstore/stickerstore/stickerstore:1.0.0/web:
     weight: 100%
-  stickerstore/stickerstore/stickerstore:1.0.1/web:
-    weight: 0%
