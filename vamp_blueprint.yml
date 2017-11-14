@@ -1,10 +1,10 @@
-name: stickerstore:1.0.0
+name: stickerstore:1.0.2
 clusters:
   stickerstore:
     services:
       breed:
-        name: stickerstore:1.0.0
-        deployable: torosent/stickerstore:1.0.0
+        name: stickerstore:1.0.2
+        deployable: torosent/stickerstore:1.0.2
         ports:
           web: 3000/http
       scale:
