@@ -1,6 +1,6 @@
 # stickerstore
 
-A DEMO deployment of a very simple HTML app.
+A DEMO deployment of a very smple HTML app.
 
 Artwork from https://github.com/ashleymcnamara/gophers
 
