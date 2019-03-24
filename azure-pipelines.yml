@@ -13,5 +13,14 @@ variables:
   imageName: 'torosent/stickerstore:$(build.buildId)'
 
 steps:
+- task: Docker@1
+  displayName: 'Docker Hub Login'
+  inputs:
+    containerregistrytype: 'Container Registry'
+    dockerRegistryEndpoint: docker-hub
+    command: login
 - script: docker build -f Dockerfile -t $(imageName) .
   displayName: 'docker build'
+- script: docker push $(imageName)
+  displayName: 'docker push'
+
