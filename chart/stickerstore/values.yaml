@@ -16,7 +16,7 @@ service:
   type: LoadBalancer
   port: 3000
 
-resources: {}
+resources:
   limits:
     cpu: 500m
     memory: 256Mi
