@@ -9,4 +9,4 @@ watch -n0.5 kubectl get hpa --namespace stickerstore
 kubectl run -i --tty load-generator --generator=run-pod/v1 --namespace stickerstore --image=busybox /bin/sh
 
 #In the shell run
-while true; do wget -q -O- http://stickerstore.stickerstore:80/healthz; done
+while true; do wget -q -O- http://stickerstore.stickerstore:80/load; done
