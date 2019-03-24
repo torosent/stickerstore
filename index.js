@@ -7,20 +7,22 @@ var bodyparser = require('body-parser');
 app.use(bodyparser.urlencoded({
     extended: true
 }));
-app.get('/', function(req, res) {
+app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname + '/index.html'));
 });
 
-app.get('/status', function (req, res) {
-    let address = process.env.STATUS_SERVICE;
-    request(address, function (error, response, body) {
-        res.send(body);        
+app.get('/healthz', function (req, res) {
+    res.send("i am alive!!!");
 });
- })
- 
- app.post('/order', function (req, res) {
-    let address = process.env.ORDER_SERVICE; 
-    request.post(address, {form:{value:req.body.value,count:req.body.count}})    
- })
+
+app.post('/order', function (req, res) {
+    let address = process.env.ORDER_SERVICE;
+    request.post(address, {
+        form: {
+            value: req.body.value,
+            count: req.body.count
+        }
+    })
+})
 
 app.listen(3000);
