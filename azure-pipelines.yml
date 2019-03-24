@@ -10,7 +10,7 @@ pool:
   vmImage: 'Ubuntu-16.04'
 
 variables:
-  imageName: 'torosent/stickerstore:$(build.buildId)'
+  imageName: 'torosent/stickerstore:$(build.buildNumber)'
 
 steps:
 - task: Docker@1
