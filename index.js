@@ -15,6 +15,18 @@ app.get('/healthz', function (req, res) {
     res.send("i am alive!!!");
 });
 
+app.get('/load', function (req, res) {
+    var x = 0.001;
+    var min = 100000;
+    var max = 1000000;
+    var random = Math.random() * (+max - +min) + +min;
+
+    for (var i = 0; i <= random; i++) {
+        x += Math.sqrt(x);
+    }
+    res.send(x.toString());
+});
+
 app.post('/order', function (req, res) {
     let address = process.env.ORDER_SERVICE;
     request.post(address, {
